@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0"><title>Login Page</title>
+  <!-- تحميل Bootstrap CSS --><!-- تحميل Bootstrap CSS --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- تحميل Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icon -->
+  <link rel="stylesheet" type="text/css" href="./assets/fonts/simple-line-icons.css">
+  
+  <!-- Slicknav -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/slicknav.css">
+  
+  <!-- Owl-carousel -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/owl.theme.default.min.css">
+  
+  <!-- Nivo Lightbox -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/nivo-lightbox.css" >
+  
+  <!-- Text-animated -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/animated-headline.css" >
+  
+  <!-- Normalize -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+  
+  <!-- Animate -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+  
+  <!-- Main Style -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Responsive Style -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">					
+  <style>body{background:rgb(41, 35, 35);}
+    /* Extra span devices (phones, 576px and down) */
+    @media only screen and (max-width: 576px) {
+      .search-container {
+        display: block;
+      }
+      .search-container input,
+      .search-container button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+  </style> 
+</head> 
+<body class="bg-dark"id="page" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="60">
+  
+  <aside class="contact-us">
+    <ul class="list-unstyled ">
+<div class="iconnn" style="position: fixed; top: 50%; right: 1%; transform: translateY(-50%); z-index: 999;
+display: flex; flex-direction: column; align-items: center; 
+background-color: rgba(52, 58, 64, 0.8); backdrop-filter: blur(5px);
+padding: 10px; border-radius: 10px;">
+<audio id="myAudio" loop>
+  <source src="./library.mp3" type="audio/mp3">
+</audio>
+<button class="btn btn-outline-light mb-2 md-1 iconnnn iop" style="width: 60px;" onclick="playAudio()">
+  <i class="fas fa-play"></i>  <p class="parg">music</p>
+</button>
+<a href="#" class="btn btn-outline-light mb-2 iconnnn" style="font-size: 24px;">
+ <i class="fab fa-facebook-square"></i>
+</a>
+<a href="#" class="btn btn-outline-light mb-2 iconnnn" style="font-size: 24px;">
+ <i class="fab fa-whatsapp-square"></i>
+</a>
+<a href="#" class="btn btn-outline-light mb-2 iconnnn" style="font-size: 24px;">
+ <i class="fab fa-twitter-square"></i>
+</a>
+<a href="#" class="btn btn-outline-light mb-2 iconnnn" style="font-size: 24px;">
+ <i class="fab fa-linkedin"></i>
+</a>
+<a href="#" class="btn btn-outline-light mb-2 iconnnn" style="font-size: 24px;">
+ <i class="fab fa-instagram"></i>
+</a>
+</div>  
+</ul>
+</aside>
+  <header>
+    <nav class="container-fulid navbar navbar-expand-md navbar-dark custom-navbar fixed-top" style="background-color: rgba(52, 58, 64, 0.8); backdrop-filter: blur(5px);">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./images/f.png" alt="Your Logo" width="120" height="auto">
+          <h2 class="z-index-5 ms-2 mb-0">BOOKS</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" 
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link acteiv" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <!-- <a class="btn btn-outline-light dropdown-toggle" href="#" id="navbarDropdownTrips" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Trips
+              </a> -->
+              <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownTrips" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Trips
+              </a>
+              <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownTrips" >
+                <li><a class="dropdown-item text-success " href="#">Home</a></li>
+                <li><a class="dropdown-item text-success" href="#">Topics</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-success" href="#">Best Seller</a></li>
+                <li><a class="dropdown-item text-success" href="#">Awards</a></li>
+                <li><a class="dropdown-item text-success" href="#">eductional tools</a></li>
+                <li><a class="dropdown-item text-success" href="#">Reading Books</a></li>
+                <li><a class="dropdown-item text-success" href="#">free Books</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted disabled active" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex align-items-center search-container">
+            <input class="form-control me-2 w-100" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light me-2" type="submit">Search</button>
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          </form>
+        </div>
+      </div>
+  </nav>
+  </header>
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color: rgba(52, 58, 64, 0.8); backdrop-filter: blur(5px);">
+        <div class="modal-header">
+          <h5 class="nav-link modal-title text-white fw-bold" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label text-white fw-bold">Email address</label>
+              <input type="email" class="form-control border border-light shadow-sm" id="email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text text-white-50 fw-bold">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label text-white fw-bold">Password</label>
+              <input type="password" class="form-control border border-light shadow-sm" id="password">
+            </div><div class="container mt-5">
+              <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="rememberMe" style="background-color: white; border-color: #ccc; transition: background-color 0.3s, border-color 0.3s;">
+                <label class="form-check-label fw-bold text-white" for="rememberMe" style="font-family: Arial, sans-serif; font-size: 16px;">Remember me</label>
+              </div>
+            </div>
+            <script>
+              const toggleSwitch = document.getElementById('rememberMe');toggleSwitch.addEventListener('change', function() {this.classList.toggle('active', this.checked);this.style.backgroundColor = this.checked ? '#ffffff' : 'white';this.style.borderColor = this.checked ? '#ffffff' : '#ccc';});
+            </script>
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-outline-light fw-bold" data-bs-dismiss="modal">Submit</button>
+              <button type="button" class="btn btn-outline-light fw-bold" data-bs-dismiss="modal">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="height: 100vh;">
+        <img src="./images/a.jpg" alt="Los Angeles" class="w-100 h-100 object-fit-cover">
+        <div class="carousel-caption d-none d-md-block p-5 text-center
+         carousel-caption d-none d-md-block  p-5 text-center rounded" 
+         style="
+          background-color: rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(5px); top: 70%; bottom: 6%;">
+          <h2 class="text-light fs-1 fw-bold sans-serif Apple Color Emoji">قريبا انشر كتابك </h2>
+          <p class="text-gray my-1">تستطيع انشاء حساب مجانا:</p>
+          <button class="btn btn-dark">Create</button>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 100vh;">
+        <img src="./images/b.avif" alt="Chicago" class="w-100 h-100 object-fit-cover">
+        <div class="carousel-caption d-none d-md-block p-5 text-center
+         carousel-caption d-none d-md-block  p-5 text-center rounded" 
+         style="
+          background-color: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(5px); top: 70%; bottom: 6%;">
+          <h2 class="text-dark">قريبا انشر كتابك </h2>
+          <p class="text-dark">تستطيع انشاء حساب مجانا:</p>
+          <button class="btn btn-dark">Create</button>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 100vh;">
+        <img src="./images/c.jpeg" alt="New York" class="w-100 h-100 object-fit-cover">
+        <div class="carousel-caption d-none d-md-block p-5 text-center
+         carousel-caption d-none d-md-block  p-5 text-center rounded" 
+         style="
+          background-color: rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(5px); top: 70%; bottom: 6%;">
+          <h2 class="text-light fs-1 fw-bold sans-serif Apple Color Emoji">قريبا انشر كتابك </h2>
+          <p class="text-gray my-1">تستطيع انشاء حساب مجانا:</p>
+          <button class="btn btn-dark">Create</button>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 100vh;">
+        <img src="./images/d.avif" alt="New York" class="w-100 h-100 object-fit-cover">
+        <div class="carousel-caption d-none d-md-block p-5 text-center
+         carousel-caption d-none d-md-block  p-5 text-center rounded" 
+         style="
+          background-color: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(5px); top: 70%; bottom: 6%;">
+          <h2 class="text-dark">قريبا انشر كتابك </h2>
+          <p class="text-dark">تستطيع انشاء حساب مجانا:</p>
+          <button class="btn btn-dark">Create</button>
+        </div>
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  
+  </div>
+  <!-- ///////////////////////////////////////list-group -->
+  <div class="container-fluid d-flex justify-content-center align-items-center p-5 my-5" style=" background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px); color: #fff;">
+  <div class="container " style="color: #fff;">
+    <h1 class="title glow">WELCOME TO BACK</h1>
+  </div>
+  <div class="container " style="color: #fff;">
+    <button class="btn btn-dark">ENTER</button>
+    </div>
+    <div class="card-white">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div>
+    <!-- ///////////////////////////////////////////////////////////////////////// -->
+  <div class="container-fluid d-flex justify-content-center align-items-center p-5 my-5" style="background-image:url(./images/backadd.jpg); background-size: cover;
+          backdrop-filter: blur(5px); color: #fff;">
+          <div class="container">
+            <h2 class="text-end text-light m-3 title glow text1" style="font-size: 85px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: white;">
+                مكتبة في جيبك
+            </h2>
+        </div>
+  </div><hr>
+  <div class="accordion" id="accordion">
+    <div class="card bg-secondary">
+      <div class="card-header" id="heading-one">
+        <a class="btn btn-block text-left collapsed  bg-secondary text-light" style="font-size: 24px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          كتب ورقية والكترونية وصوتية 
+          <span class="float-right">
+            <i class="fas fa-chevron-down arrow-icon" id="arrow-one"></i>
+          </span>
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="heading-one" data-parent="#accordion">
+        <div class="card-body bg-dark text-light">
+          يوجد لدينا مواضيع صدرت حديثا والاكثر مبيعا وجوائز وشحن منخفض وعروض خاصة وصفحات مشوقة كتب نادرة واكاديمية وصندوث القراءة
+        </div>
+      </div>
+    </div>
+    
+    <div class="card bg-secondary">
+      <div class="card-header" id="heading-two">
+        <a class="btn btn-block text-left collapsed  bg-secondary text-light" style="font-size: 24px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          أطفال وناشئة
+          <span class="float-right">
+            <i class="fas fa-chevron-down arrow-icon" id="arrow-two"></i>
+          </span>
+        </a>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="heading-two" data-parent="#accordion">
+        <div class="card-body bg-dark text-light">
+         الذهاب للصفحة الرئيسية والمواضيع الاكثر مبيعا ووسائل تعليمية للاطفال وصندوق قراءه وجوائز
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class="accordion " id="accordion">
+    <div class="card bg-secondary">
+      <div class="card-header" id="heading-one">
+        <a class="btn btn-block text-left  bg-secondary text-light" style="font-size: 24px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; " type="button" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapseOne">
+          متجر الهدايا
+          <span class="float-right">
+            <i class="fas fa-chevron-down arrow-icon" id="arrow-one"></i>
+          </span>
+        </a>
+      </div>
+      <div id="collapsethree" class="collapse show" aria-labelledby="heading-one" data-parent="#accordion">
+        <div class="card-body bg-dark text-light">
+         يوجد لدينا اقسام قسم العودة للمدارس واكسسوارات كتب واكسسوارات منزليه وملابس وطرازات وحقائب وحلي وصابون ومأكولات ومناسبات 
+        </div>
+      </div>
+    </div>
+</div>
+    <div class="accordion " id="accordion">
+      <div class="card bg-secondary">
+        <div class="card-header" id="heading-one">
+          <a class="btn btn-block text-left  bg-secondary text-light " style="font-size: 24px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; " type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
+            كل الاشتراكات
+            <span class="float-right">
+              <i class="fas fa-chevron-down arrow-icon" id="arrow-one"></i>
+            </span>
+          </a>
+        </div>
+        <div id="collapsefour" class="collapse show" aria-labelledby="heading-one" data-parent="#accordion">
+          <div class="card-body bg-dark text-light">
+            يوجد لدين من الاقسام وصندوق القراءة كتب بلاحدود
+          </div>
+        </div>
+      </div>
+      </div>
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <style>
+      .custom-bg {
+        background-color: rgba(52, 58, 64, 0.8);
+        backdrop-filter: blur(5px);
+      }
+    </style>
+    <div class="container-fluid d-flex justify-content-center fw-bolder align-items-center p-2 mt-5 custom-bg rounded" style="color: #fff;">
+      <h1>Translate to English</h1>
+    </div>
+    <div class="container-fluid custom-bg bg-opacity-25">
+      <div class="container-fluid text-center custom-bg fw-bolder rounded">
+      </div>
+      <form>
+        <h2 class="text-white fs-1  pt-4">Write and Translate &nbsp; <a class="text-white rounded bg-opacity-50 badge badge-dark fs-4" href="#" style="text-decoration: none;">Press Here</a></h2>
+        <button class="btn custom-bg text-white shadow shadow-dark mb-4 pr-4 pl-4 py-2 fw-bolder badge badge-light d-flex justify-content-center" 
+        onclick="copyToClipboard()">
+          <div class="d-flex align-items-center">
+            <h4 class="h4">
+            <i class="fas fa-copy me-2"> </i>COPY
+            </h4>
+          </div>
+        </button>
+        <div class="form-floating p-5">
+          <textarea for="floatingTextarea2" class="form-control " placeholder="TRANSLATE :" id="floatingTextarea2" style="height: 150px; ">TRANSLATE :</textarea>
+      </form>
+    </div>
+    <hr>
+    <div class="container-fluid d-flex justify-content-center fw-bolder align-items-center p-2 mt-5 custom-bg rounded" style="color: #fff;">
+      <h1>Translate to Arbic</h1>
+    </div>
+    <div class="container-fluid custom-bg bg-opacity-25">
+      <div class="container-fluid text-center custom-bg fw-bolder rounded">
+      </div>
+      <form>
+        <h2 class="text-white fs-1 fw-bolder pt-4">Write and Translate &nbsp; <a class="text-white rounded bg-opacity-50 badge badge-ldark fs-4" href="#" style="text-decoration: none;">Press Here</a></h2>
+        <button class="btn custom-bg text-white shadow shadow-dark mb-4 pr-4 pl-4 py-2 fw-bolder badge badge-light d-flex justify-content-center" 
+        onclick="copyToClipboard()">
+          <div class="d-flex align-items-center">
+            <h4 class="h4">
+            <i class="fas fa-copy me-2"></i> COPY
+            </h4>
+          </div>
+        </button>
+        <div class="form-floating p-5">
+          <textarea for="floatingTextarea2" class="form-control " placeholder="TRANSLATE :" id="floatingTextarea2" style="height: 150px; ">TRANSLATE :</textarea>
+          
+        </div>
+      </form>
+    </div>
+    <hr>
+    <div class="container-fluid d-flex justify-content-center fw-bolder align-items-center p-2 mt-5 custom-bg rounded" style="color: #fff;">
+      <h1>Translate into Turkish</h1>
+    </div>
+    <div class="container-fluid custom-bg bg-opacity-25">
+      <div class="container-fluid text-center custom-bg fw-bolder rounded">
+      </div>
+      <form>
+        <h2 class="text-white fs-1 fw-bolder pt-4">Write and Translate &nbsp; <a class="text-white rounded bg-opacity-50 badge badge-ldark fs-4" href="#" style="text-decoration: none;">Press Here</a></h2>
+        <button class="btn custom-bg text-white shadow shadow-dark mb-4 pr-4 pl-4 py-2 fw-bolder badge badge-light d-flex justify-content-center" 
+        onclick="copyToClipboard()">
+          <div class="d-flex align-items-center">
+            <h4 class="h4">
+            <i class="fas fa-copy me-2"> </i>COPY
+            </h4>
+          </div>
+        </button>
+        <div class="form-floating p-5">
+          <textarea for="floatingTextarea2" class="form-control " placeholder="TRANSLATE :" id="floatingTextarea2" style="height: 150px; ">TRANSLATE :</textarea>
+        </div>
+      </form>
+    </div>
+    <hr>
+    <script>
+      function copyToClipboard() {
+        var text = document.getElementById("floatingTextarea2").value;
+        navigator.clipboard.writeText(text);
+        alert("Copy Createful!");
+        event.preventDefault();
+      }
+    </script>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <section class="service" id="service">
+          <div style="background-image: url('./images/back2.jpg'); background-attachment: fixed; background-size: cover; height: 400px;"></div>
+          
+          <div class="container-fluid">
+            <div class="d-flex justify-content-center fw-bolder mb-4 h-100% bg-secondary rounded" style="color: #fff;">
+              <h1 class="title glow">  FREE BOOKS NEW :)</h1>
+            </div>
+            <div class="container-fluid p-5">
+            <!-- First Row -->
+            <div class="row ">
+              <!-- item-1 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-fluid bg-secondary text-light h-100">
+                  <img src="./images/1m.jpg"  alt="..." height="300px" >
+                  <div class="card-body d-flex flex-column">
+                     <h5 class="card-title">صدام الملوك</h5>
+                    <p class="card-text"> تاريخ النشر: 01/01/2017
+                      الناشر: دار التنوير للطباعة والنشر
+                      النوع: كتاب إلكتروني/epub (جميع الأنواع)
+                      حمّل iKitab (أجهزة لوحية وهواتف ذكية)</p>
+                    <a href="#" class="btn btn-dark">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <!-- item-2 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-fluid bg-secondary text-light h-100">
+                  <img src="./images/2m.jpg"  alt="..." height="300px" >
+                  <div class="card-body d-flex flex-column">
+                     <h5 class="card-title">
+                      Storm of Swords </h5>
+                    <p class="card-text"> Publication date: 01/01/2018
+                      publisher: Dar Al Tanweer for Printing and Publishing
+                      Type: Paperback ( All Types )
+                      Other types: eBook/epub   
+                      $24.50
+                      </p>
+                    <a href="#" class="btn btn-dark">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <!-- item-4 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-fluid bg-secondary text-light h-100">
+                  <img src="./images/m3.jpg"  alt="..." height="300px" >
+                  <div class="card-body d-flex flex-column">
+                     <h5 class="card-title">A feast for crows </h5>
+                    <p class="card-text">Comments: 1 Rank: 70
+                      Publication date: 01/01/2019
+                      publisher: Dar Al Tanweer for Printing and Publishing
+                      Type: Paperback ( All Types )
+                      Other types: eBook/epub   
+                      $21.00
+                      </p>
+                    <a href="#" class="btn btn-dark">Read more</a>
+                  </div>
+                </div>
+              </div>
+            
+            <!-- Second Row -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+              <div class="card card-fluid bg-secondary text-light h-100">
+                <img src="./images/m4.jpg"  alt="..." height="300px" >
+                <div class="card-body d-flex flex-column">
+                   <h5 class="card-title">
+                    City of Wonders </h5>
+                  <p class="card-text"> Publication date: 06/13/2024
+                    publisher: Dar Al Tanweer for Printing and Publishing
+                    Type: Paperback
+                    </p>
+                  <a href="#" class="btn btn-dark">Read more</a>
+                </div>
+              </div>
+            </div>
+              <!-- item-5 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-fluid bg-secondary text-light h-100">
+                  <img src="./images/m5.jpg"  alt="..." height="300px" >
+                  <div class="card-body d-flex flex-column">
+                     <h5 class="card-title">
+                      Our appointment is in August </h5>
+                    <p class="card-text"> Publication date: 04/23/2024
+                      publisher: Dar Al Tanweer for Printing and Publishing
+                      Type: Paperback
+                      </p>
+                    <a href="#" class="btn btn-dark">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <!-- item-6 -->              
+               <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-fluid bg-secondary text-light h-100">
+                  <img src="./images/m7.jpg"  alt="..." height="300px" >
+                  <div class="card-body d-flex flex-column">
+                     <h5 class="card-title">The art of indifference </h5>
+                    <p class="card-text"> Publication date: 01/01/2024
+                      publisher: Dar Al Tanweer for Printing and Publishing
+                      Type: Paperback ( All Types )
+                      Other types: eBook/epub   
+                      $7.00
+                      </p>
+                    <a href="#" class="btn btn-dark">Read more</a>
+                  </div>
+                </div>
+              </div>
+            <!-- Third Row -->
+            <div class="row justify-content-center">
+              <!-- item-7 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-fluid bg-secondary text-light h-100">
+                  <img src="./images/m8.jpg"  alt="..." height="300px" >
+                  <div class="card-body d-flex flex-column">
+                     <h5 class="card-title">By Miguel Delibes </h5>
+                    <p class="card-text">
+                      Publication date: 01/26/2024
+                      publisher: Dar Al Tanweer for Printing and Publishing
+                      Type: Paperback</p>
+                    <a href="#" class="btn btn-dark">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <!-- item-8 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-fluid bg-secondary text-light h-100">
+                  <img src="./images/m6.jpg"  alt="..." height="300px" >
+                  <div class="card-body d-flex flex-column">
+                     <h5 class="card-title">By Khaled Al-Ghanami </h5>
+                    <p class="card-text"> تاريخ النشر: 27/03/2024
+                      الناشر: دار التنوير للطباعة والنشر
+                      النوع: ورقي غلاف عادي
+                      </p>
+                    <a href="#" class="btn btn-dark">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+        </section>
+        <!-- end of service --> 
+          <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <section class="service" id="service">
+          <div style="background-image: url('./images/back2.jpg'); background-attachment: fixed; background-size: cover; height: 400px;"></div>
+          <div class="container">
+          </div> 
+        </div>
+    </section>
+            <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+    <!-- team section -->
+     <!-- team section -->
+    <section class="team mt-3" id="team">
+      <div class="container-lg bg-secondary  my-2 py-2">
+        <h2 class="text-center text-light m-3 title glow">Books amazing</h2>
+      </div>
+      <div class="container-lg mt-5">     
+        <div class="row members">
+          <!-- card-1 -->
+          <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card text-light thx-card shadow-lg card-img-1">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="upper-content text-start">
+                  <h3> 
+                    لعبة العروش </h3>
+                  <span><i class="far fa-clock"></i> تاريخ النشر: 01/01/2022</span>
+                </div>
+                <div class="lower-content">
+                  <div class="img-box">
+                    <img src="./images/b1.jpg" alt="hello" >
+                  </div>
+                  <div class="description">
+                    <h5 class="text-dark fw-bold ms-2">افضل مافي الأدب الخيالي</h5>
+                    <span class="ms-2">نبدة الناشر
+                      هارت راوي قصص بالقطرة يتمتع بخيال واحد في المليون، والمسلسل التلفزيوني الماخوذ عن
+                      روايته رائع، لكن الكتب أفضل بكثير - ستيفن كينج
+                      نجحت سلسلة مارتي الخيالية في اشغال خيال الملايين للسبب نفسه الذي جعل أعمال هوميروس
+                      مارتن هو الأفضل على الإطلاق بين من يكتبون </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card -2 -->
+          <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card text-light thx-card shadow-lg  card-img-2">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="upper-content text-start ">
+                <h3>غسان كنفاني</h3>
+                <span><i class="far fa-clock"></i> تاريخ النشر: 12/01/2015</span>
+                </div>
+                <div class="lower-content">
+                  <div class="img-box">
+                    <img src="./images/b2.jpg" alt="hello" >
+                  </div>
+                  <div class="description">
+                    <h5 class="text-dark fw-bold ms-2">جذور العبقرية وتجلياتها الإبداعية</h5>
+                    <b><span class="ms-2">نبذة الناشر :
+                      لماذا غسان كنفاني ؟ هو السؤال الذي طرحه الدكتور محمد عبد القادر على نفسه عندما بدأ بكتابة السيرة الأدبية لكاتب لم يلتق به يوماً في حياته، ولكنه كان حاضراً في وجدانه وساهم في تشكيل ثقافته ووعيه، وكان من أولى اهتماماته في الكتابة، وبالتأكيد هو يتحدث هنا عن نموذج استثنائي في الأدب
+                      </span></b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card-3 --> 
+          <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card text-light thx-card shadow-lg card-img-3">
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="upper-content text-start "> 
+                <h3>الطفل الفلسطيني</h3>
+                <span><i class="far fa-clock"></i> تاريخ النشر: 01/01/2014</span>
+                </div>
+                <div class="lower-content">
+                  <div class="img-box">
+                    <img src="./images/b3.jpg" alt="hello" class="mr-3 ">
+                  </div>
+                  <div class="description">
+                    <h5 class="text-dark fw-bold ms-2">الناشر: دار رواية للنشر</h5><b>
+                    <span class="ms-2">ينصح لأعمار بين: 3-6 سنوات نبدة الناشر : مجموعة ماتعة تحوي آداب عامة وفوائد تربوية تمتاز بتنوع موضوعاتها فمنها ما يربط الطفل بنماذج و قدوات عظيمة كالصحابة رضي الله عنهم ومنها التربوي الذي يأمر بخلق جيد أو ينهى عن فعل سيء</span>
+                  </b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <section class="news container-fluid mb-5  mt-5" id="news">
+      <div class="container-lg mt-4 mb-5 md-1 ">
+        <!-- item-1 -->
+        <article class="news-card d-flex shadow-lg">
+          <div class="img-box incline-right">
+            <img src="./images/mg1.jpg" alt="">
+          </div>
+          <div class="description p-3">
+            <h1 class="text-light fs-1 fw-bold " >القيم الإسلامية</h1>
+            <div class="span text-light">
+              <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2 text-secondary"></i> تاريخ النشر: 29/07/2024
+              </time>
+            </div>
+            <div class="line bg-light"></div>
+            <p class=" text-light">نبذة الناشر : حرص فيه المؤلف على إبراز شمولية الرسالة الإسلامية، وأنها الحل الوحيد لمشكلات العالم المعاصر، وبين تأثير القيم في المحافظة على البيئة
+
+              Google Play
+              
+              AppStore
+              
+              مما ناقشه الكتاب N نعمة الله على الإنسان تستلزم قيامه بحسن عبادته أركان الإسلام هي أصول البر والإحسان أثر العقيدة في وقاية البيئة من المضار أثر أركان الإسلام في المحافظة على سلامة البيئة
+            </p>
+            <ul class="text-light d-flex list-unstyled text-center">
+              <li class="list-item"> <i class="fas fa-file-pdf mx-2 text-light"></i> الناشر: دار الكلمة الطيبة  PDF</li>
+              <li class="list-item"> <i class="fas fa-dollar-sign mx-2 text-Create"></i> 4.00USD</li>
+              <li class="list-item"> <i class="fas fa-book mx-2 text-danger"></i> لـ أحمد بن حمد الخليلي</li>
+          </ul>
+           </div>
+        </article>
+          <!-- item-2 -->
+        <article class="news-card d-flex shadow-lg mt-4">
+            <div class="img-box incline-left">
+              <img src="./images/mg2.jpg" alt="">
+            </div>
+            <div class="description p-3">
+              <h2 class="text-light fs-1 fw-bold " >جرائم خلف الستار</h2>
+              <div class="span text-light">
+                <time datetime="2020-05-25 12:00:00">
+                 <i class="fas fa-calendar-alt mr-2 text-secondary"></i>تاريخ النشر: 01/01/1900
+                </time>
+              </div>
+              <div class="line bg-light"></div>
+              <p class=" text-light">
+                من منا يعيش بوجه واحد من منا يملأ الخير قلبه دون أن يكون الشر بمقدار الخير من منا يظل على سجايا الفطرة كن على ثقة أنك لن تحصل على ما تتمناه دون دفع الثمن دون التنازل عن الأشياء التي تدفعك للحصول على ما تتمناه لن يجعلك تقف سوى عظامك .. ولن يسرتك سوى جلدك.. أما الناس فسيفارقونك وتفارقهم ستحتويك الحياة عندما لا تذنب، وستلتف ثعابين الحياة حول عنقك إذا أذنبت. ستظلمك الحياة ما لم تطبق العدل بأي وسيلة كانت
+                </p>
+                <ul class="text-light d-flex list-unstyled text-center">
+                  <li class="list-item"> <i class="fas fa-file-pdf mx-2 text-light"></i> 
+                    النوع: ورقي غلاف عادي (جميع الأنواع)PDF</li>
+                  <li class="list-item"> <i class="fas fa-dollar-sign mx-2 text-Create"></i> 3.00 USD</li>
+                  <li class="list-item"> <i class="fas fa-book mx-2 text-danger"></i> الناشر: دار مسارللنشر والتوزيع</li>
+              </ul>
+             </div>
+        </article>
+            <!-- item-3 -->        <article class="news-card d-flex shadow-lg">
+          <div class="img-box incline-right">
+            <img src="./images/mg3.jpg" alt="">
+          </div>
+          <div class="description p-3">
+            <h1 class="text-light fs-1 fw-bold " > 
+              بين الدين والعلم</h1>
+            <div class="span text-light">
+              <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2 text-secondary"> </i>تاريخ النشر: 29/07/2024
+              </time>
+            </div>
+            <div class="line bg-light"></div>
+            <p class=" text-light">
+              تحميل كتاب بين الدين والعلم pdf يطرح هذا الكتاب السؤال القديم الجديد: هل ثمة عداءٌ بين الدين بنصوصه الثابتة والعلم بتطوره المستمر؟ فيستعرض ثلاث قضايا علمية كبرى أحدثت ضجَّات تاريخيَّة وهزت البلاط الكنسي في القرون الوسطى؛ حتى وصلت باتهام أصحابها بالهرطقة والحكم عليهم بالموت. ويعرض الفصل الأول النظريات العلمية في علم الفلك والكون، وكيف تصادمت تلك النظريات آنذاك مع تفسيرات اللاهوتيين الظاهرة للنصوص الدينية المقدسة. كما يعرض الفصل الثاني النظريات الحديثة عن جغرافية الأرض وتكوينها، تلك النظريات التي لقِيَت صدودًا وحروبًا لاهوتية شعواء. وأخيرًا يتطرق الكاتب إلى إحدى أهم النظريات التى أثارت جدلًا كبيرًا إلى الآن، وهي نظرية «التطور والنشوء»؛ ليصل بالقارئ لنتيجة مفادُها أن الصراع المزعوم هو فقط بين التفسيرات المتشددة للدين وبين العلم، لا بين الدين والعلم عمومًا.
+
+عرض المزيد
+
+            </p>
+            <ul class="text-light d-flex list-unstyled text-center">
+              <li class="list-item"> <i class="fas fa-file-pdf mx-2 text-light"></i> PDFلغة: عربي</li>
+              <li class="list-item"> <i class="fas fa-dollar-sign mx-2 text-Create"></i> 9.00$ USD</li>
+              <li class="list-item"> <i class="fas fa-book mx-2 text-danger"></i> لـ أندرو ديكسون وايت</li>
+          </ul>
+           </div>
+        </article>
+            <!-- item-4 -->
+        <article class="news-card d-flex shadow-lg mt-4">
+              <div class="img-box incline-left">
+                <img src="./images/mg4.jpg" alt="">
+              </div>
+              <div class="description p-3">
+                <h2 class="text-light fs-1 fw-bold " >السعادة الواقعية: إضاءة الجانب المظلم من الحياة</h2>
+                <div class="span text-light">
+                  <time datetime="2020-05-25 12:00:00">
+                   <i class="fas fa-calendar-alt mr-2 text-secondary"></i> تاريخ النشر: 29/07/2024
+                  </time>
+                </div>
+                <div class="line bg-light"></div>
+                <p class=" text-light">
+                  كتاب السعاده الواقعيه.. كتاب بيتكلم معاك بهدوء، و يحكيلك حكايه الحياه.. ويكشفلك حقيقه السعاده والألم، ويعلمك ازاي تعيش هذه الحقيقه..
+
+في الفصل الأول يراجع معك و يحدثك عن منشاء السعاده والوانها وكيف تعيشها وكيف يمكن ان تكون السعاده سامه.. و كيف تفهم معنى المعاناه وانها جزء من منظومه السعاده..
+
+بعدها في الفصل التاني تدخل معه في سباقات الحياه بين ناجح ومهزوم..
+حقيقه مشاعر السعاده للناجح.. المقارنات والمنافسات وكيف توجهم بصوره صحيه في وقتهم المناسب..
+كيف تفهم و تغير الفشل..
+
+من الفصل الثالث للسادس، تأتي الصدمات وما لا تتوقعه.. ليأخذ بيدك يسندك حتى لا تقع بعد الصدمه..   
+                 أقرأ المزيد... </p>
+                <ul class="text-light d-flex list-unstyled text-center">
+                  <li class="list-item"> <i class="fas fa-file-pdf mx-2 text-light"></i> PDF</li>
+                  <li class="list-item"> <i class="fas fa-dollar-sign mx-2 text-Create"></i> 6.99 USD</li>
+                  <li class="list-item"> <i class="fas fa-book mx-2 text-danger"></i> د.شريف</li>
+              </ul>
+               </div>
+        </article>    
+        </div>
+    </section>
+    <!-- end of  news -->
+    <h2 class=" text-center text-light m-3 title glow" style=" font-size:55px;">Join Us</h2>
+    <div class="container">
+      <div class="joinus">
+        <div class="row">
+
+          <div class="col mt-4 col-md-12 col-sm-12 col-lg-3">
+            <div class="bg-dark text-secondary " style="width: 300px; height: 300px; border: 1px  black; border-radius: 10px;">
+            <h4>Subscribe Now</h4>
+          <img class=" last-img " src="./images/whats.jpeg" width="120px" height="120px" style="border-radius: 50px;margin-left: 100px;">
+            <h4>Go To Link</h4>
+          </div></div>
+          
+          <div class="col mt-4 col-md-12 col-sm-12 col-lg-3">
+            <div class="bg-dark text-secondary " style="width: 300px; height: 300px; border: 1px  black; border-radius: 10px;">
+            <h4>FOllow</h4>
+          <img class=" last-img " src="./images/WhatsApp.jpg" width="120px" height="120px" style="border-radius: 50px;margin-left: 100px;">
+            <h4>Go To Link</h4>
+          </div></div>
+          
+          <div class="col mt-4 col-md-12 col-sm-12 col-lg-3">
+            <div class="bg-dark text-secondary" style="width: 300px; height: 300px; border: 1px  black; border-radius: 10px;">
+            <h4>Like The Bage</h4>
+          <img class=" last-img " src="./images/WhatsApp3.jpg" width="120px" height="120px" style="border-radius: 50px;margin-left: 100px;">
+            <h4>Go To Link</h4>
+          </div></div>
+          
+          <div class="col mt-4 col-md-12 col-sm-12 col-lg-3">
+            <div class="bg-dark text-secondary" style="width: 300px; height: 300px; border: 1px  black; border-radius: 10px;">
+            <h4>Watches Video</h4>
+          <img class=" last-img " src="./images/WhatsApp4.jpg" width="120px" height="120px" style="border-radius: 50px;margin-left: 100px;">
+            <h4>Go To Link</h4>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+     <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- footer section -->
+  <footer class=" text-light pb-2 bg-dark footer" id="footer">
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <hr class=" border-top border-3 border-light my-3">
+          <img class=" last-img " src="./images/b.jpg" width="100px" height="100px" style="border-radius: 50px;"><h1>Importnat link</h1>
+          <hr class="border-top border-3 border-light my-3">
+          <address>
+            <p>Tel : 000-000-000</p>
+            <p>Address : Sana'a</p>
+            <p>Fax : 000-000-000</p>
+          </address>
+        </div>
+        <div class="col-md-4 mid">
+          <hr class="border-top border-3 border-light my-3">
+          <img class=" last-img " src="./images/f.png" width="100px" height="100px" style="border-radius: 50px;"><h1>Good Company</h1>
+
+          <hr class="border-top border-3 border-light my-3">
+          <p><a href="#">Visit Us</a></p>
+          <p><a href="#">Take alook</a></p>
+          <p><a href="#">Your health is more important</a></p>
+        </div>
+        <div class="col-md-4">
+          <hr class="border-top border-3 border-light my-3">
+          <img class=" last-img  " src="./images/foot1.png" width="100px" height="100px" style="border-radius: 50px;"><h1>Vision</h1>
+          
+          <hr class="border-top border-3 border-light my-3">
+          <p>Serveices for all </p>
+          <p>Provide best serveices</p>
+          <p>you will be better than before</p>
+        </div>
+      </div>
+    </div>
+    <hr class="border-top border-3 border-light my-3">
+     <!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+     
+      <!-- footer section -->
+      
+<div class="row footer_div bg-dark " >
+  <ul class="wrapper justify-content-center align-item-center">
+  <li class="icon facebook">
+      <span class="tooltip">Facebook</span>
+      <span><i class="fab fa-facebook-f"></i></span>
+  </li>
+  <li class="icon twitter">
+      <span class="tooltip">Twitter</span>
+      <span><i class="fab fa-twitter"></i></span>
+  </li>
+  <li class="icon instagram">
+      <span class="tooltip">Instagram</span>
+      <span><i class="fab fa-instagram"></i></span>
+  </li>
+  <li class="icon github">
+      <span class="tooltip">Github</span>
+      <span><i class="fab fa-github"></i></span>
+  </li>
+  <li class="icon youtube">
+      <span class="tooltip">Youtube</span>
+      <span><i class="fab fa-youtube"></i></span>
+  </li>
+</ul>
+
+  <div class="footer_block col-xs-6 col-s-4 col-md-3 col-xl-2">
+      <img src="./images/1.png" />
+      <img src="./images/2.gif" />
+  </div>
+  <div class="footer_block col-xs-6 col-s-4 col-md-3 col-xl-2">
+      <div style="margin-bottom: 6px;">
+          <img src="./images/3.png" />
+          <img src="./images/6.png" style="width: 73px;"/>
+      </div>
+      <div style="margin-bottom: 6px;">
+          <img src="./images/4.png" />
+          <img src="./images/5.png" />
+      </div>
+      <div>
+          <img src="./images/7.png" id="ctl00_footer1_wuimg" style="border-radius: 5px" />
+      </div>
+      <div>
+          <img src="./images/8.png" style="width: 73px;"/>
+          <img src="./images/11.png" style="width: 73px;"/>
+      </div>
+  </div>
+  <div class="footer_block col-xs-12 col-s-8 col-md-12 col-xl-4">
+      <a class="inline" href="#">
+          <img width="25" src="./images/10.png" />
+      </a>
+      <a class="inline" href="#">
+          <img width="25" src="./images/9.png" />
+      </a>
+  </div>     
+  <div class="col-xs-12">
+      <span id="ctl00_footer1_lcopyright" class="copyright">&copy; عبدالله عامر كافة الحقوق محفوظة ©</span>
+  </div>
+  </div>
+    <!-- end of footer section -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@4.7.1/dist/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  
+  <!-- Include Bootstrap 4.6.2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script><script src="https://code.jquery.com/jquery-4.6.0.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/12446789.js" crossorigin="anonymous"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script>
+      function playAudio() {
+          const audio = document.getElementById('myAudio');
+          audio.play();
+      }
+  </script>
+</body>
+</html>
